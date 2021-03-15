@@ -1,11 +1,12 @@
 import { useStyles } from '../../styles/styles';
+import Home from '../../pages/home/Home';
 
 const App = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <h1>Air Quality Index app coding challenge</h1>
+      <Home />
     </div>
   );
 };

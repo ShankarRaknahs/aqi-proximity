@@ -1,3 +1,3 @@
 export const APP = {
-  TITLE: 'AQI Proximity',
+  TITLE: 'Proximity AQI',
 };

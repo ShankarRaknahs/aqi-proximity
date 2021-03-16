@@ -1,10 +1,16 @@
-import React from 'react';
-
-import { io } from 'socket.io-client';
 import { APP } from '../config/app.config';
+let socket;
 
-export const socket = io.connect(APP.SOCKET_SERVER_URL, {
-  transports: ['websocket'],
-  reconnect: true,
-});
-export const SocketContext = React.createContext();
+export const initiateSocket = () => {
+  socket = new WebSocket(APP.SOCKET_SERVER_URL);
+};
+
+export const subscribe = (cbk) => {
+  if (!socket) {
+    initiateSocket();
+  }
+
+  socket.onmessage = (event) => {
+    return cbk(null, JSON.parse(event.data));
+  };
+};

@@ -16,7 +16,7 @@ const Single = ({ cities }) => {
 
   const [activeCity, setActiveCity] = React.useState(cities[0].city);
   const [activeCities, setActiveCities] = React.useState(cities);
-
+  const NOT_APPLICABLE = 'NA';
   const handleChange = (event) => {
     setActiveCity(event.target.value);
     setActiveCities(cities.filter((city) => city.city === event.target.value));
@@ -27,6 +27,7 @@ const Single = ({ cities }) => {
       if (aqi >= category.startRange && aqi <= category.endRange) {
         return category.name;
       }
+      return NOT_APPLICABLE;
     });
     return categoryName[0];
   };

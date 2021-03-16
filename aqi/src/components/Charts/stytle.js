@@ -30,6 +30,8 @@ export const useStyles = makeStyles({
   },
   singleCityCard: {
     borderRadius: 20,
+    width: '38vw',
+    height: '50vh',
   },
   singleCityValue: {
     position: 'absolute',
@@ -46,6 +48,8 @@ export const useStyles = makeStyles({
     backgroundColor: COLORS.PRIMARY01,
   },
   liveDataCard: {
+    width: '55vw',
+    height: '50vh',
     borderRadius: 20,
     backgroundColor: COLORS.PRIMARY01,
     marginLeft: '2vw',
@@ -66,6 +70,8 @@ export const useStyles = makeStyles({
   },
   compareDataCard: {
     display: 'flex',
+    minWidth: '95.2vw',
+    minHeight: '60vh',
     backgroundColor: COLORS.PRIMARY01,
     marginInline: '4vh',
     borderRadius: 10,
@@ -86,7 +92,7 @@ export const useStyles = makeStyles({
   },
   cityCard: {
     margin: '1vw',
-    width: '13vw',
+    width: '14vw',
     height: '10vh',
   },
   bold: {

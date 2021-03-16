@@ -7,7 +7,7 @@ export const useStyles = makeStyles({
   },
   header: {
     fontWeight: 'bolder',
-    color: COLORS.DARK,
+    color: COLORS.GREY,
   },
   headerLight: {
     fontWeight: 'bolder',
@@ -51,8 +51,7 @@ export const useStyles = makeStyles({
     marginLeft: '2vw',
   },
   liveData: {
-    display: 'flex',
-    flexDirection: 'column',
+    color: '#f0f0f7',
     margin: '1vw',
     borderRadius: 10,
     padding: '1vw',
@@ -77,7 +76,7 @@ export const useStyles = makeStyles({
   },
   categoryData: {
     padding: '1vw',
-    width: '12vw',
+    width: '14vw',
     height: '1vh',
     backgroundColor: COLORS.PRIMARY01,
     display: 'flex',

@@ -20,7 +20,6 @@ export const useStyles = makeStyles({
     backgroundColor: COLORS.SECONDARY,
     fontWeight: 'bolder',
     border: 'none',
-    // borderRadius: 10,
     margin: '2vw',
     width: '10vw',
   },
@@ -75,12 +74,10 @@ export const useStyles = makeStyles({
   },
   compareData: {
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
   },
   categoryData: {
     padding: '1vw',
-    width: '70%',
+    width: '12vw',
     height: '1vh',
     backgroundColor: COLORS.PRIMARY01,
     display: 'flex',
@@ -89,7 +86,7 @@ export const useStyles = makeStyles({
     justifyContent: 'center',
   },
   cityCard: {
-    margin: '2vw',
+    margin: '1vw',
     width: '13vw',
     height: '10vh',
   },

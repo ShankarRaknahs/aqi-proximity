@@ -1,6 +1,6 @@
 export const APP = {
   TITLE: 'Proximity AQI',
-  SOCKET_SERVER_URL: 'ws://city-ws.herokuapp.com',
+  SOCKET_SERVER_URL: 'wss://city-ws.herokuapp.com',
   CATEGORIES: [
     { name: 'GOOD', startRange: 0, endRange: 50, color: '#52B157' },
     { name: 'SATISFACTORY', startRange: 51, endRange: 100, color: '#a6d86f' },

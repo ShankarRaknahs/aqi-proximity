@@ -19,7 +19,7 @@ const Single = ({ cities }) => {
 
   const handleChange = (event) => {
     setActiveCity(event.target.value);
-    setActiveCities(cities.filter((city) => city.city === activeCity));
+    setActiveCities(cities.filter((city) => city.city === event.target.value));
   };
 
   const findCategory = (aqi) => {
@@ -61,9 +61,6 @@ const Single = ({ cities }) => {
             >
               <RadialBar
                 minAngle={10}
-                // innerRadius='80%'
-                // outerRadius='100%'
-                // label={{ fill: '#000000', position: 'insideStart' }}
                 background
                 clockWise={true}
                 dataKey='uv'

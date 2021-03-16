@@ -17,17 +17,17 @@ const Home = () => {
     {
       city: 'Bengaluru',
       aqi: 490.09818064317164,
-      lu: `10:30 PM`,
+      lu: `8:30 PM`,
     },
     {
       city: 'Kolkata',
       aqi: 203.34304842576836,
-      lu: `10:30 PM`,
+      lu: `1 hour ago`,
     },
     {
       city: 'Bhubaneswar',
       aqi: 98.60712812357924,
-      lu: `10:30 PM`,
+      lu: `2 hours ago`,
     },
     {
       city: 'Chennai',

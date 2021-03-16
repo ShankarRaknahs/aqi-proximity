@@ -45,14 +45,14 @@ const Compare = ({ cities }) => {
           {APP.CATEGORIES.map((category) => {
             return (
               <div key={category.name}>
-                <Avatar className={classes.categoryData}>
+                <Button size='large' className={classes.categoryData}>
                   <div style={{ color: category.color }}>
                     <Typography variant='subtitle2' className={classes.bold}>
                       {category.name} ({category.startRange}-{category.endRange}
                       )
                     </Typography>
                   </div>
-                </Avatar>
+                </Button>
                 {cities.map((city) => {
                   const __aqi = Math.round(city.aqi);
                   return (

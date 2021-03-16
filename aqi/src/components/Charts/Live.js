@@ -1,4 +1,4 @@
-import { Avatar, CardContent, CardHeader, Typography } from '@material-ui/core';
+import { CardContent, Typography } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import { useStyles } from './stytle';
 
@@ -11,20 +11,20 @@ const Live = ({ cities }) => {
         <CardContent className={classes.liveCardContent}>
           <div>
             <Typography variant='subtitle1' className={classes.headerLight}>
-              Recent updates
+              Recent update ({cities[0].lu})
             </Typography>
           </div>
           <div className={classes.columnContainer}>
             {cities.map((city) => {
               return (
-                <Avatar key={city.city} className={classes.liveData}>
+                <div key={city.city} className={classes.liveData}>
                   <Typography variant='subtitle2' className={classes.header}>
                     {city.city}
                   </Typography>
                   <Typography variant='subtitle2' className={classes.header}>
                     {Math.round(city.aqi * 100 + Number.EPSILON) / 100}
                   </Typography>
-                </Avatar>
+                </div>
               );
             })}
           </div>

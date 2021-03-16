@@ -38,9 +38,13 @@ export const useStyles = makeStyles({
     fontWeight: 'bolder',
   },
   singleCityHeader: {
+    display: 'flex',
     fontWeight: 'bolder',
     position: 'absolute',
     marginTop: '25vh',
+    width: '20vw',
+    justifyContent: 'center',
+    backgroundColor: COLORS.PRIMARY01,
   },
   liveDataCard: {
     borderRadius: 20,
@@ -63,13 +67,16 @@ export const useStyles = makeStyles({
     flexWrap: 'wrap',
   },
   compareDataCard: {
+    display: 'flex',
     backgroundColor: COLORS.PRIMARY01,
     marginInline: '4vh',
     borderRadius: 10,
+    justifyContent: 'center',
   },
   compareData: {
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'center',
   },
   categoryData: {
     padding: '1vw',
@@ -96,5 +103,9 @@ export const useStyles = makeStyles({
   },
   time: {
     marginLeft: '1vw',
+  },
+  subtitle: {
+    color: '#ffffff',
+    fontWeight: 'bold',
   },
 });

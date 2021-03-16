@@ -6,31 +6,44 @@ import { Typography } from '@material-ui/core';
 
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import { APP } from '../../config/app.config';
+import { COLORS } from '../../config/theme.config';
 
 import { useStyles } from './stytle';
-const data = [
-  {
-    name: 'singleCity',
-    uv: 10,
-    fill: '#ffc658',
-  },
-  {
-    name: 'singleCity',
-    uv: 10,
-    fill: '#000000',
-  },
-];
 
 const Single = ({ cities }) => {
   const classes = useStyles();
 
-  // const [name, setName] = React.useState(cities[0].city);
-  const [activeCity, setActiveCity] = React.useState(cities[0]);
+  const [activeCity, setActiveCity] = React.useState(cities[0].city);
+  const [activeCities, setActiveCities] = React.useState(cities);
 
   const handleChange = (event) => {
-    // setName(event.target.value);
     setActiveCity(event.target.value);
+    setActiveCities(cities.filter((city) => city.city === activeCity));
   };
+
+  const findCategory = (aqi) => {
+    const categoryName = APP.CATEGORIES.filter((category) => {
+      if (aqi >= category.startRange && aqi <= category.endRange) {
+        return category.name;
+      }
+    });
+    return categoryName[0];
+  };
+
+  const data = [
+    {
+      name: 'singleCity',
+      uv: 500,
+      fill: COLORS.GREY,
+    },
+
+    {
+      uv: Math.round(activeCities[0].aqi),
+      pv: 2400,
+      fill: findCategory(Math.round(activeCities[0].aqi)).color,
+    },
+  ];
 
   return (
     <div>
@@ -40,15 +53,17 @@ const Single = ({ cities }) => {
             <RadialBarChart
               width={320}
               height={320}
-              innerRadius='80%'
+              innerRadius='90%'
               outerRadius='100%'
               data={data}
               startAngle={180}
               endAngle={0}
             >
               <RadialBar
-                minAngle={50}
-                label={{ fill: '#000000', position: 'insideStart' }}
+                minAngle={10}
+                // innerRadius='80%'
+                // outerRadius='100%'
+                // label={{ fill: '#000000', position: 'insideStart' }}
                 background
                 clockWise={true}
                 dataKey='uv'
@@ -56,14 +71,23 @@ const Single = ({ cities }) => {
             </RadialBarChart>
 
             <Typography variant='h2' className={classes.singleCityValue}>
-              {Math.round(activeCity.aqi * 100 + Number.EPSILON) / 100}
+              {Math.round(activeCities[0].aqi * 100 + Number.EPSILON) / 100}
             </Typography>
-            <Typography
-              variant='subtitle1'
-              className={classes.singleCityHeader}
-            >
-              Moderate Air Quality
-            </Typography>
+
+            <Card className={classes.singleCityHeader}>
+              <CardContent>
+                <Typography
+                  variant='subtitle1'
+                  className={classes.subtitle}
+                  style={{
+                    color: findCategory(Math.round(activeCities[0].aqi)).color,
+                  }}
+                >
+                  {findCategory(Math.round(activeCities[0].aqi)).name} AIR
+                  QUALITY
+                </Typography>
+              </CardContent>
+            </Card>
           </div>
           <div>
             <FormControl variant='outlined' className={classes.buttonLight}>
@@ -77,7 +101,11 @@ const Single = ({ cities }) => {
                 }}
               >
                 {cities.map((city) => {
-                  return <option value={city}>{city.city}</option>;
+                  return (
+                    <option key={city.city} value={city.city}>
+                      {city.city}
+                    </option>
+                  );
                 })}
               </Select>
             </FormControl>

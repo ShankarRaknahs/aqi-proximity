@@ -17,7 +17,7 @@ const Live = ({ cities }) => {
           <div className={classes.columnContainer}>
             {cities.map((city) => {
               return (
-                <Avatar className={classes.liveData}>
+                <Avatar key={city.city} className={classes.liveData}>
                   <Typography variant='subtitle2' className={classes.header}>
                     {city.city}
                   </Typography>

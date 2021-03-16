@@ -11,12 +11,12 @@ const Home = () => {
   const cities = [
     {
       city: 'Mumbai',
-      aqi: 181.62555547023916,
+      aqi: 381.62555547023916,
       lu: `10:30 PM`,
     },
     {
       city: 'Bengaluru',
-      aqi: 190.09818064317164,
+      aqi: 490.09818064317164,
       lu: `10:30 PM`,
     },
     {

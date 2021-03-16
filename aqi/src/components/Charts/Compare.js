@@ -44,7 +44,7 @@ const Compare = ({ cities }) => {
         <CardContent className={classes.compareData}>
           {APP.CATEGORIES.map((category) => {
             return (
-              <div>
+              <div key={category.name}>
                 <Avatar className={classes.categoryData}>
                   <div style={{ color: category.color }}>
                     <Typography variant='subtitle2' className={classes.bold}>
@@ -56,7 +56,7 @@ const Compare = ({ cities }) => {
                 {cities.map((city) => {
                   const __aqi = Math.round(city.aqi);
                   return (
-                    <div>
+                    <div key={city.city}>
                       {__aqi >= category.startRange &&
                       __aqi <= category.endRange ? (
                         <CityCard

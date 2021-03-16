@@ -19,8 +19,10 @@ export const useStyles = makeStyles({
   buttonLight: {
     backgroundColor: COLORS.SECONDARY,
     fontWeight: 'bolder',
-    borderRadius: 10,
+    border: 'none',
+    // borderRadius: 10,
     margin: '2vw',
+    width: '10vw',
   },
   chartContainer: {
     display: 'flex',
@@ -32,12 +34,13 @@ export const useStyles = makeStyles({
   },
   singleCityValue: {
     position: 'absolute',
-    marginTop: '8vh',
+    marginTop: '15vh',
+    fontWeight: 'bolder',
   },
   singleCityHeader: {
     fontWeight: 'bolder',
     position: 'absolute',
-    marginTop: '17vh',
+    marginTop: '25vh',
   },
   liveDataCard: {
     borderRadius: 20,
@@ -62,7 +65,7 @@ export const useStyles = makeStyles({
   compareDataCard: {
     backgroundColor: COLORS.PRIMARY01,
     marginInline: '4vh',
-    paddingInline: '1vw',
+    borderRadius: 10,
   },
   compareData: {
     display: 'flex',
@@ -70,15 +73,18 @@ export const useStyles = makeStyles({
   },
   categoryData: {
     padding: '1vw',
-    width: '100%',
+    width: '70%',
+    height: '1vh',
     backgroundColor: COLORS.PRIMARY01,
     display: 'flex',
     flexDirection: 'column',
     borderRadius: 20,
+    justifyContent: 'center',
   },
   cityCard: {
     margin: '2vw',
     width: '13vw',
+    height: '10vh',
   },
   bold: {
     fontWeight: 'bolder',

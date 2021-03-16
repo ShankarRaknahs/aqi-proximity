@@ -7,7 +7,7 @@ export const initiateSocket = () => {
 
 export const subscribe = (cbk) => {
   if (!socket) {
-    return true;
+    initiateSocket();
   }
 
   socket.onmessage = (event) => {

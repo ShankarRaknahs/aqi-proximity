@@ -24,4 +24,11 @@ export const useStyles = makeStyles({
     fontWeight: 'bolder',
     color: COLORS.LIGHT,
   },
+  loadContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
+    width: '100vw',
+  },
 });

@@ -5,6 +5,7 @@ import Single from '../../components/Charts/Single';
 import Live from '../../components/Charts/Live';
 import Compare from '../../components/Charts/Compare';
 import { initiateSocket, subscribe } from '../../api/socket';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Home = () => {
   const classes = useStyles();
@@ -98,7 +99,10 @@ const Home = () => {
             <Compare cities={cities} />
           </>
         ) : (
-          <div className={classes.container}> Loading...</div>
+          <div className={classes.loadContainer}>
+            {' '}
+            <CircularProgress disableShrink />
+          </div>
         )}
       </Layout>
     </div>

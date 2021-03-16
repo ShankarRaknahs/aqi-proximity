@@ -1,13 +1,6 @@
-import {
-  Avatar,
-  Button,
-  CardContent,
-  CardHeader,
-  Typography,
-} from '@material-ui/core';
+import { Button, CardContent, Typography } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import { useStyles } from './stytle';
-import Paper from '@material-ui/core/Paper';
 
 import { APP } from '../../config/app.config';
 

@@ -19,8 +19,9 @@ export const useStyles = makeStyles({
   buttonLight: {
     backgroundColor: COLORS.SECONDARY,
     fontWeight: 'bolder',
-    borderRadius: 10,
+    border: 'none',
     margin: '2vw',
+    width: '10vw',
   },
   chartContainer: {
     display: 'flex',
@@ -32,12 +33,17 @@ export const useStyles = makeStyles({
   },
   singleCityValue: {
     position: 'absolute',
-    marginTop: '8vh',
+    marginTop: '15vh',
+    fontWeight: 'bolder',
   },
   singleCityHeader: {
+    display: 'flex',
     fontWeight: 'bolder',
     position: 'absolute',
-    marginTop: '17vh',
+    marginTop: '25vh',
+    width: '20vw',
+    justifyContent: 'center',
+    backgroundColor: COLORS.PRIMARY01,
   },
   liveDataCard: {
     borderRadius: 20,
@@ -60,25 +66,29 @@ export const useStyles = makeStyles({
     flexWrap: 'wrap',
   },
   compareDataCard: {
+    display: 'flex',
     backgroundColor: COLORS.PRIMARY01,
     marginInline: '4vh',
-    paddingInline: '1vw',
+    borderRadius: 10,
+    justifyContent: 'center',
   },
   compareData: {
     display: 'flex',
-    flexDirection: 'row',
   },
   categoryData: {
     padding: '1vw',
-    width: '100%',
+    width: '12vw',
+    height: '1vh',
     backgroundColor: COLORS.PRIMARY01,
     display: 'flex',
     flexDirection: 'column',
     borderRadius: 20,
+    justifyContent: 'center',
   },
   cityCard: {
-    margin: '2vw',
+    margin: '1vw',
     width: '13vw',
+    height: '10vh',
   },
   bold: {
     fontWeight: 'bolder',
@@ -90,5 +100,9 @@ export const useStyles = makeStyles({
   },
   time: {
     marginLeft: '1vw',
+  },
+  subtitle: {
+    color: '#ffffff',
+    fontWeight: 'bold',
   },
 });

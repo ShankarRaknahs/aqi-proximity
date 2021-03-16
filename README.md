@@ -40,3 +40,12 @@ ReactJS
 6. Feature2: Live updates - To be updated
 7. Feature3: AQI of different cities and their comparison - To be updated
 
+# Graphing library:
+
+1. Recharts
+
+Reason - 
+1. Strong community support 
+2. Open source 
+3. SVG support
+
